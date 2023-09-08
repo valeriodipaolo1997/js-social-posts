@@ -114,3 +114,23 @@ posts.forEach(element => {
         
     })
 
+
+    const likeBtn = document.querySelectorAll('.like-button');
+
+
+
+likeBtn.forEach((element,i) => {
+    let likeStatus = false;
+    element.addEventListener('click', function like(e) {
+
+    e.preventDefault();
+    
+    if (likeStatus) {
+        likeStatus = false;
+        this.style.color = '#404040'
+    } else {
+        likeStatus = true
+        this.style.color = 'blue'
+    }
+})
+})
