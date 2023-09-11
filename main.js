@@ -116,7 +116,7 @@ posts.forEach(element => {
 
 
     const likeBtn = document.querySelectorAll('.like-button');
-
+    const likeNumber = document.querySelectorAll('.js-likes-counter')
 
 
 likeBtn.forEach((element,i) => {
@@ -127,8 +127,10 @@ likeBtn.forEach((element,i) => {
     
     if (likeStatus) {
         likeStatus = false;
+        likeNumber[i].textContent = Number(likeNumber[i].textContent) - 1;
         this.style.color = '#404040'
     } else {
+        likeNumber[i].textContent = Number(likeNumber[i].textContent) + 1;
         likeStatus = true
         this.style.color = 'blue'
     }
